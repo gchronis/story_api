@@ -1,0 +1,32 @@
+<div class="jumbotron">
+<h2><%= @leaf.section %></h2>
+  <p class="lead"><%= @leaf.description %></p>
+</div>
+
+<div class="row">
+  <div class="col-lg-5">
+    <h4>Side A</h4>
+    <p><%= @leaf.side_a %>
+  </div>
+
+  <div class="col-lg-2"></div>
+  <div class="col-lg-5">
+    <h4>Side B</h4>
+      <p><%=@leaf.side_b%>
+     </li>
+    </ul>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-4"><%= link "go here", to: leaf_path(@conn, :show, @links.one)%></div>
+  <div class="col-md-4"><%= link "go there", to: leaf_path(@conn, :show, @links.two)%></div>
+  <div class="col-md-4"><%= link "go this", to: leaf_path(@conn, :show, @links.three)%></div>
+</div>

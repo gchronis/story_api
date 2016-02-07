@@ -1,0 +1,6 @@
+<h2>New leaf</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: leaf_path(@conn, :create) %>
+
+<%= link "Back", to: leaf_path(@conn, :index) %>

@@ -1,0 +1,34 @@
+<h2>Listing leaves</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Side a</th>
+      <th>Side b</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for leaf <- @leaves do %>
+    <tr>
+      <td><%= leaf.section %></td>
+      <td><%= leaf.title %></td>
+      <td><%= leaf.description %></td>
+      <td><%= leaf.side_a %></td>
+      <td><%= leaf.side_b %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: leaf_path(@conn, :show, leaf), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: leaf_path(@conn, :edit, leaf), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: leaf_path(@conn, :delete, leaf), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New leaf", to: leaf_path(@conn, :new) %>

@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <h2>access point</h2>
+  <p class="lead"> start here maybe</p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h4>do you begin at</h4>
+    <ul>
+      <li>
+      <a href="<%= leaf_path @conn, :show, 1 %>">the beginning?</a>
+      </li>
+      <li>
+      <a href="<%= leaf_path @conn, :show, 2 %>">the middle?</a>
+      </li>
+      <li>
+      <a href="<%= leaf_path @conn, :show, 3 %>">the end?</a>
+      </li>
+    </ul>
+  </div>
+
