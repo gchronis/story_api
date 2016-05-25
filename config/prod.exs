@@ -21,8 +21,10 @@ config :story, Story.Endpoint,
 config :story, Story.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
-  pool_size: 20
-
+  pool_size: 20,
+  username: "postgres",
+  password: "postgres",
+  database: "story_prod"
 # Do not print debug messages in production
 config :logger, level: :info
 
