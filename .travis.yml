@@ -1,11 +1,17 @@
 language: elixir
 elixir:
-  - 1.2
+- 1.2
 otp_release:
-  - 18.2
+- 18.2
 sudo: false
 addons:
-  postgresql: '9.4' # Use postgres 9.4
+  postgresql: '9.4'
 before_script:
-# Create the test database
 - psql -c 'create database story_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: qJbImpxOAKfIR+RLSYA77gYpEgh87W7/b4or6M/fFTHc57VD8kiSkcrIcdI/qy9IuwYDHf/T+dmbGR/KzBj/1tzUiSTGM1T2bTWQBuAWlG8Fa2LufwEOzdOLv4e0LYxeEFLLEIxr4IRAG/S+861yayUGeKWIHbCwhrbDfakpBIZ4i0Dhfyf3/orm+FlwxxQ5cANK/34KIFfj4WIjwwI84Mi1M08DUaPiRNF6uOLEm7XtyeREYnUKcWMdS9vwkF8D2eyvVqmGOjWhiPRw9F916DbyIxTC+4rS8S6AWQI8ZjL9XTm0XmC3K6+G6ekmDbF7iXAVN3KXtlV03IntrqWTR4g0VR8YZrB3vHFXTOdf5Sxj9buu54azl93fqt8K37TGHRBxSoGbvyHzFIY/mk+q05ooK2gFb49UV/r0kfaIo2oQQp/Qyjt6YrMLU4leUf/7pqTz58LiMzPqrraPCoG4HtwTyMiNHdImwaeO5KxnrK953KHwZWhcgr9TzehsvcaEqbNtYHLh2wAySASZnNcoOq+9zZvsEerzzUqvWEqJ6irdvA09PKvFJPhKXrgOVRDKOCKlGttS6vZfCU1d9uVKm2uJ5qv4LC9GRqutgv4pZm288tDqYMbDeLMQb2M236DMSubE8Ji6i5/kvK9JF103lsnGXgFDT3Cdbk8YivmYcmo=
+  app: cryptic-falls-56232
+  on:
+    repo: gchronis/story_api
