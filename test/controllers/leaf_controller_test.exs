@@ -34,7 +34,7 @@ defmodule Story.LeafControllerTest do
   test "shows chosen resource", %{conn: conn} do
     leaf = Repo.insert! %Leaf{}
     conn = get conn, leaf_path(conn, :show, leaf)
-    assert html_response(conn, 200) =~ "Show leaf"
+    assert html_response(conn, 200) =~ "Side A"
   end
 
   test "renders page not found when id is nonexistent", %{conn: conn} do
