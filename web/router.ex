@@ -13,6 +13,12 @@ defmodule Story.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/api", Story do
+    pipe_through :api
+    # Route stuff to our SessionController
+    resources "session", SessionController, only: [:index]
+  end
+
   scope "/", Story do
     pipe_through :browser # Use the default browser stack
 

@@ -35,6 +35,7 @@ defmodule Story.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:csv, "~> 1.3.0"}]
+     {:csv, "~> 1.3.0"},
+     {:cors_plug, "~> 1.1"}]
   end
 end

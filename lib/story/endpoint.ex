@@ -34,6 +34,7 @@ defmodule Story.Endpoint do
     store: :cookie,
     key: "_story_key",
     signing_salt: "F4sJvjSi"
-
+    
+  plug CORSPlug
   plug Story.Router
 end
