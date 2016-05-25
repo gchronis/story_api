@@ -1,0 +1,23 @@
+<h2>Show sms</h2>
+
+<ul>
+
+  <li>
+    <strong>Sender:</strong>
+    <%= @sms.sender %>
+  </li>
+
+  <li>
+    <strong>Sent at:</strong>
+    <%= @sms.sent_at %>
+  </li>
+
+  <li>
+    <strong>Content:</strong>
+    <%= @sms.content %>
+  </li>
+
+</ul>
+
+<%= link "Next", to: sms_path(@conn, :show, @sms.id + 1) %>
+<%= link "Back", to: sms_path(@conn, :index) %>

@@ -18,6 +18,7 @@ defmodule Story.Router do
 
     get "/", PageController, :index
     resources "/leaves", LeafController
+    resources "/texts", SMSController
   end
 
   # Other scopes may use custom stacks.

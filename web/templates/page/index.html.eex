@@ -6,16 +6,17 @@
 <div class="row marketing">
   <div class="col-lg-6">
     <h4>do you begin at</h4>
-    <ul>
-      <li>
+      <p>
       <a href="<%= leaf_path @conn, :show, 1 %>">the beginning?</a>
-      </li>
-      <li>
+      </p>
+      <p>
       <a href="<%= leaf_path @conn, :show, 2 %>">the middle?</a>
-      </li>
-      <li>
+      </p>
+      <p>
       <a href="<%= leaf_path @conn, :show, 3 %>">the end?</a>
-      </li>
-    </ul>
+      </p>
   </div>
-
+  <div class="col-lg-6">
+    <%= link "spout off", to: leaf_path(@conn, :new) %>
+  </end>
+</end>

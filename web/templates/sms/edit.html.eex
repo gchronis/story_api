@@ -1,0 +1,6 @@
+<h2>Edit sms</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: sms_path(@conn, :update, @sms) %>
+
+<%= link "Back", to: sms_path(@conn, :index) %>
