@@ -1,6 +1,8 @@
 <div class="jumbotron">
 <h2><%= @leaf.section %></h2>
-  <p class="lead"><%= @leaf.description %></p>
+  <h3 align="left"><%= @leaf.title %></h3>
+  <br>
+  <p class="lead" align="right"><%= @leaf.description %></p>
 </div>
 
 <div class="row">
